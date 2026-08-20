@@ -2,7 +2,7 @@
     <x-card class="p-10">
         <header>
             <h1 class="text-3xl text-center font-bold my-6 uppercase">
-                Manage Offers
+                Manage offers
             </h1>
         </header>
 
@@ -37,7 +37,7 @@
                     <tr class="border-gray-300">
                         <td class="px-4 py-8 border-t border-b border-gray-300 text-lg">
                             <p class="text-center">
-                                No Offers Found
+                                No offers found
                             </p>
                         </td>
                     </tr>

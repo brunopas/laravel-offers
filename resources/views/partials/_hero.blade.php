@@ -4,7 +4,7 @@
 
     <div class="z-10">
         <h1 class="text-6xl font-bold uppercase text-white">
-            Lara<span class="text-black">Price</span>
+            Lara<span class="text-black">Offers</span>
         </h1>
         <p class="text-2xl text-gray-200 font-bold my-4">
             Find Offers & Coupons

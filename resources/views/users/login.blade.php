@@ -2,7 +2,7 @@
     <x-card class="p-10 max-w-lg mx-auto mt-24">
         <header class="text-center mb-10">
             <h2 class="text-2xl font-bold uppercase mb-1">
-                Log In
+                Log in
             </h2>
             <p class="mb-4">Log into your account to share Offers & Coupons</p>
         </header>
@@ -33,7 +33,7 @@
 
             <div class="mb-6">
                 <button type="submit" class="bg-laravel text-white rounded py-2 px-4 hover:bg-black">
-                    Sign In
+                    Sign in
                 </button>
             </div>
 

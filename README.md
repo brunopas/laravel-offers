@@ -1,84 +1,85 @@
-<h1 align="center">
-  <strong>LaraPrice</strong>
-</h1>
+# LaraOffers
 
-<p align="center">
- <a href="#about">About</a> |
- <a href="#usage">Usage</a> |
- <a href="#technologies">Technologies</a> |
- <a href="#license">License</a>
-</p>
+Laravel app for browsing store offers and coupons with likes, comments, view counts, and image uploads. Personal study project.
 
----
+## Features
 
-## About
+- Browse offers filtered by tags and keyword search
+- View offer details with comments, likes, and view tracking
+- Browse and manage stores
+- Create and manage coupons with expiration dates
+- Upload images for offers and stores
+- Register, log in, and manage your content from a dashboard
+- Database seeder with sample offers, stores, coupons, and users
 
-An application to share offers & coupons. LaraPrice was developed using PHP Language and Laravel Framework.<br>
-This is a non-profit project. All prototypes, software code, design and illustrations are created for educational purposes only.
+## Tech stack
 
-<img alt="LaraPrice" title="#LaraPrice" src="public/github/readme-1.png" />
+- **Runtime:** PHP 8, Laravel 9
+- **Views:** Blade components, Tailwind CSS, Alpine.js
+- **Database:** MySQL via Eloquent
+- **Uploads:** Image files stored in `storage/app/public`
+- **Dev tools:** Laravel Pint, Clockwork
 
----
+See [composer.json](./composer.json) and [package.json](./package.json) for full dependency lists.
 
-## Usage
+## Requirements
 
-Before you begin, you will need to have the following tools installed on your machine:
-<strong><a href="https://www.php.net/">PHP</a></strong>, <strong><a href="https://getcomposer.org/">Composer</a></strong>, <strong><a href="https://git-scm.com/">Git</a></strong>, and <strong><a href="https://nodejs.org/">Node</a></strong>.<br>
-In addition, it is good to have an editor to work with the code like <strong><a href="https://code.visualstudio.com/">VSCode</a></strong> or <strong><a href="https://www.jetbrains.com/phpstorm/">PHP Storm</a></strong>.
+- [PHP](https://www.php.net/) >= 8.0.2 with required extensions
+- [Composer](https://getcomposer.org/)
+- [Git](https://git-scm.com/)
+- [MySQL](https://www.mysql.com/) (or change the driver in `config/database.php`)
 
-### Installation
-First, clone this repository, install the dependencies, and setup your <code>.env</code> file.
+## Environment variables
+
+Copy `.env.example` to `.env` and fill in the values below.
+
+| Variable | Required | Default |
+| --- | --- | --- |
+| `DB_DATABASE` | Yes | `laravel_offers` |
+| `DB_USERNAME` | Yes | `root` |
+| `DB_PASSWORD` | Yes | — |
+
+All other variables use sensible Laravel defaults for local development.
+
+## Getting started
+
 ```bash
-$ git clone https://github.com/brunopas/laravel-price.git
-$ cd laravel-price
+git clone https://github.com/brunopas/laravel-offers.git
+cd laravel-offers
 
-$ composer install
-$ cp .env.example .env
-```
-This app uses <strong><a href="https://www.mysql.com/">MySQL</a></strong>. To use something different, open up <code>config/Database.php</code> and change the default driver.<br>
-To use MySQL, make sure you install it, setup a database and then add your DB credentials (database, username and password) to the <code>.env</code> file.
-
-### Database Setup
-Then, create the necessary database.
-```bash
-$ php artisan db
-$ create database laravel_price
-```
-
-### Migrations
-Finally, run the initial migrations and seeders.
-```bash
-$ php artisan migrate --seed
-```
-
-### File Uploading
-When uploading files, they go to "storage/app/public". Create a symlink with the following command to make them publicly accessible.
-```bash
-$ php artisan storage:link
+composer install
+cp .env.example .env
+php artisan key:generate
 ```
 
-### Running The App
-To serve the application on the PHP development server, run the following command:
+Create a MySQL database called `laravel_offers` (or whatever you set in `DB_DATABASE`), then:
+
 ```bash
-$ php artisan serve
+php artisan migrate --seed
+php artisan storage:link
+php artisan serve
 ```
 
----
+Open [http://localhost:8000](http://localhost:8000).
 
-## Technologies
+## Project structure
 
-The following tools were used to build the project:
--   **[PHP](https://www.php.net/)** >= 8.0.2
--   **[Laravel Framework](https://laravel.com/)** >= 9.19
--   **[Tailwind CSS](https://tailwindcss.com/)**
--   **[MySQL](https://www.mysql.com/)**
-
-For more information, see the files [composer.json](./composer.json) and [package.json](./package.json).
-
----
+```text
+laravel-offers/
+├── app/
+│   ├── Http/Controllers/   # Offer, Coupon, Store, User, OfferComment, OfferLike
+│   └── Models/              # User, Offer, Coupon, Store, OfferComment, OfferLike, OfferView
+├── config/                  # Laravel config files
+├── database/
+│   ├── factories/           # Model factories for seeding
+│   ├── migrations/          # Schema migrations
+│   └── seeders/             # DatabaseSeeder
+├── public/                  # Static assets, images, Tailwind CSS
+├── resources/views/         # Blade templates (offers, coupons, stores, users)
+├── routes/                  # web.php
+└── tests/                   # PHPUnit tests
+```
 
 ## License
 
-This project is under the license [MIT](./LICENSE).
-
-Made with ❤️ love by Bruno Pasquarelli Macedo 👋🏻 [Get in Touch!](https://www.linkedin.com/in/brunopasmacedo)
+MIT. See [LICENSE](./LICENSE).

@@ -12,7 +12,7 @@
 
                 <div>
                     <h3 class="text-2xl font-semibold mb-4">
-                        Coupon Code
+                        Coupon code
                     </h3>
                     <div class="text-md space-y-6">
                         {{ $coupon->code }}
@@ -21,7 +21,7 @@
 
                 <div class="mt-4">
                     <h3 class="text-2xl font-semibold mb-4">
-                        Coupon Description
+                        Coupon description
                     </h3>
                     <div class="text-md space-y-6">
                         {{ $coupon->description }}
@@ -30,14 +30,14 @@
 
                 <div class="mt-4">
                     <h3 class="text-2xl font-semibold mb-4">
-                        Application Rules
+                        Application rules
                     </h3>
                     <div class="text-md space-y-6">
                         {{ $coupon->application_rules }}
 
                         <a href="{{ $coupon->store->website }}" target="_blank"
                             class="block bg-laravel text-white mt-6 py-2 rounded-xl hover:opacity-80">
-                            <i class="fa-solid fa-globe"> </i> Go To Store
+                            <i class="fa-solid fa-globe"> </i> Go to store
                         </a>
                     </div>
                 </div>

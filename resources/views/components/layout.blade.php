@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ app()->getLocale() }}">
 
 <head>
     <meta charset="UTF-8" />
@@ -22,12 +22,12 @@
             },
         };
     </script>
-    <title>LaraPrice | Find Offers & Coupons</title>
+    <title>LaraOffers | Find Offers & Coupons</title>
 </head>
 
 <body class="mb-48">
     <nav class="flex justify-between items-center mb-4">
-        <a href="/"><img class="w-24" src="{{ asset('images/logo.png') }}" alt="" class="logo" /></a>
+        <a href="/"><img class="w-24" src="{{ asset('images/logo.png') }}" alt="LaraOffers" class="logo" /></a>
         <ul class="flex space-x-4 mr-6 text-lg">
             <li class="font-semibold">
                 <a href="/" class="px-4 py-2 font-semibold text-sm bg-blue-800 text-white rounded-full shadow-sm">
@@ -96,15 +96,15 @@
 
     <footer
         class="fixed bottom-0 left-0 w-full flex items-center justify-start font-bold bg-laravel text-white h-20 mt-20 opacity-90 md:justify-center">
-        <p class="ml-2">Copyright &copy; 2022, All Rights reserved</p>
+        <p class="ml-2">Copyright &copy; 2022 LaraOffers, All Rights reserved</p>
 
         @auth
             <p>
                 <a href="/offers/create" class="absolute top-1 right-10 bg-black text-white py-1 px-5 text-center w-40">
-                    Share Offer
+                    Share offer
                 </a>
                 <a href="/coupons/create" class="absolute top-11 right-10 bg-black text-white py-1 text-center px-5 w-40">
-                    Share Coupon
+                    Share coupon
                 </a>
             </p>
         @endauth

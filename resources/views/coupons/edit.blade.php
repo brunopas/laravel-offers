@@ -2,9 +2,9 @@
     <x-card class="p-10 max-w-lg mx-auto mt-24">
         <header class="text-center mb-10">
             <h2 class="text-2xl font-bold uppercase mb-1">
-                Edit Coupon
+                Edit coupon
             </h2>
-            <p class="mb-4">Share a Coupon to help people</p>
+            <p class="mb-4">Share a coupon to help people</p>
         </header>
 
         <form method="POST" action="/coupons/{{ $coupon->id }}">
@@ -50,7 +50,7 @@
             </div>
 
             <div class="mb-6">
-                <label for="application_rules" class="inline-block text-lg font-semibold mb-2">Application Rules</label>
+                <label for="application_rules" class="inline-block text-lg font-semibold mb-2">Application rules</label>
                 <textarea class="border border-gray-200 rounded p-2 w-full" name="application_rules" rows="10">{{ old('application_rules') ?? $coupon->application_rules }}</textarea>
 
                 @error('application_rules')
@@ -60,7 +60,7 @@
 
             <div class="mb-6">
                 <button class="bg-laravel text-white rounded py-2 px-4 hover:bg-black">
-                    Edit Coupon
+                    Edit coupon
                 </button>
 
                 <a href="/" class="text-black ml-4">Back</a>

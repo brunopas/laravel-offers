@@ -9,7 +9,7 @@
                 <x-coupon-card :coupon="$coupon" />
             @endforeach
         @else
-            <p>No Coupons found.</p>
+            <p>No coupons found.</p>
         @endunless
     </div>
 

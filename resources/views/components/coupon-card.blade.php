@@ -15,7 +15,7 @@
 
             @if ($coupon->application_rules)
                 <div class="text-md mt-8">
-                    <p class="font-semibold">Application Rules</p>
+                    <p class="font-semibold">Application rules</p>
                     {{ $coupon->application_rules }}
                 </div>
             @endif

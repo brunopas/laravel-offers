@@ -29,14 +29,14 @@
 
                 <div>
                     <h3 class="text-2xl font-semibold mb-4">
-                        Offer Description
+                        Offer description
                     </h3>
                     <div class="text-md space-y-6">
                         {{ $offer->description }}
 
                         <a href="{{ $offer->url }}" target="_blank"
                             class="block bg-laravel text-white mt-6 py-2 rounded-xl hover:opacity-80">
-                            <i class="fa-solid fa-globe"> </i> Go To Offer
+                            <i class="fa-solid fa-globe"> </i> Go to offer
                         </a>
                     </div>
                 </div>

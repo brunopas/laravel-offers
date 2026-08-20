@@ -9,7 +9,7 @@
                 <x-store-card :store="$store" />
             @endforeach
         @else
-            <p>No Stores found.</p>
+            <p>No stores found.</p>
         @endunless
     </div>
 

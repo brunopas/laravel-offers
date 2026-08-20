@@ -2,7 +2,7 @@
     <x-card class="p-10 max-w-lg mx-auto mt-24">
         <header class="text-center mb-10">
             <h2 class="text-2xl font-bold uppercase mb-1">
-                Edit Offer
+                Edit offer
             </h2>
             <p class="mb-4">{{ $offer->title }}</p>
         </header>
@@ -42,7 +42,7 @@
             </div>
 
             <div class="mb-6">
-                <label for="price_old" class="inline-block text-lg font-semibold mb-2">Old Price</label>
+                <label for="price_old" class="inline-block text-lg font-semibold mb-2">Old price</label>
                 <input type="text" class="border border-gray-200 rounded p-2 w-full" name="price_old"
                     value="{{ old('price_old') ?? $offer->price_old }}" />
 
@@ -63,7 +63,7 @@
 
             <div class="mb-6">
                 <label for="tags" class="inline-block text-lg font-semibold mb-2">
-                    Tags (Comma Separated)
+                    Tags (comma separated)
                 </label>
                 <input type="text" class="border border-gray-200 rounded p-2 w-full" name="tags"
                     value="{{ old('tags') ?? $offer->tags }}" />
@@ -86,7 +86,7 @@
 
             <div class="mb-6">
                 <label for="thumbnail" class="inline-block text-lg font-semibold mb-2">
-                    Offer Thumbnail
+                    Offer thumbnail
                 </label>
                 <input type="file" class="border border-gray-200 rounded p-2 w-full" name="thumbnail" />
 
@@ -101,7 +101,7 @@
 
             <div class="mb-6">
                 <label for="description" class="inline-block text-lg font-semibold mb-2">
-                    Ofer Description
+                    Offer description
                 </label>
                 <textarea class="border border-gray-200 rounded p-2 w-full" name="description" rows="10">{{ old('description') ?? $offer->description }}</textarea>
 
@@ -112,7 +112,7 @@
 
             <div class="mb-6">
                 <button class="bg-laravel text-white rounded py-2 px-4 hover:bg-black">
-                    Edit Offer
+                    Edit offer
                 </button>
 
                 <a href="/" class="text-black ml-4">Back</a>

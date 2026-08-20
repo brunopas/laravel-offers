@@ -9,7 +9,7 @@
                 <x-offer-card :offer="$offer" />
             @endforeach
         @else
-            <p>No Offers found.</p>
+            <p>No offers found.</p>
         @endunless
     </div>
 
